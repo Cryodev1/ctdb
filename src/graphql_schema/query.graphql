@@ -7,13 +7,17 @@ type Query {
     getAllOrganizations: [Organization!]!
 
     # Events
+    getAllEvents: [Event]!
     getEventById(id: String): Event
     getEventByName(name: String): Event
     getEventsByEdition(edition: String): [Event]
+    getEventsByOrganizerName(name: String): [Event]
+    getEventsByOrganizerId(id: String): [Event]
 
     # Matches
     getAllMatches: [Match!]!
     getMatchesByPlayer(eloName: String): [Match!]!
+    getMatchById(id: String): Match!
 
     # Players
     getPlayerByEloName(eloName: String!): Player
